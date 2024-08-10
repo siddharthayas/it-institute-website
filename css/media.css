@@ -1,0 +1,249 @@
+@media (max-width: 1023px) {
+	html {
+		font-size: 70%;
+	}
+	.ph {
+		display: none;
+	}
+	/* .s-header {
+		height: ;
+	} */
+	.s-header .logo {
+		background: none;
+		padding: 8px 0 0 0;
+	}
+	.s-header .logo img {
+		margin-inline: 2rem;
+	}
+	.main-menu {
+		justify-content: end;
+	}
+	.menu {
+	}
+	.search {
+		display: none;
+	}
+
+	.s-header .navbar-btn {
+		display: block;
+	}
+
+	.hero-section {
+		margin-top: 100px;
+	}
+	.hero-section .hero-text {
+		left: 4rem;
+		width: 100%;
+		text-align: left;
+	}
+	.hero-section .bg {
+		width: 80%;
+		height: 100%;
+		padding-top: 12rem;
+	}
+	.hero-section .pattern-hero {
+		left: 70px;
+	}
+
+	/* menu responsive */
+	.s-header {
+		position: fixed !important;
+		top: 0;
+		z-index: 2;
+		width: 100%;
+		background-color: white;
+		overflow-y: scroll;
+	}
+	.s-header .menu li {
+		height: 4rem;
+		position: static !important;
+		display: block;
+	}
+
+	.menu ul {
+		position: fixed !important;
+		top: 6.25rem;
+		flex-direction: column;
+		display: initial;
+		width: 30rem;
+		height: 100vh;
+		background-color: white;
+		z-index: 999;
+		/* padding-block: 100px !important; */
+		padding: 1.5rem 2rem 1rem 2rem;
+		justify-content: flex-start !important;
+		align-items: start;
+		gap: 1rem;
+		left: 0;
+		/* for transition */
+		transform: translateX(-100%);
+		overflow-y: scroll;
+		overflow-x: hidden;
+		transition: all 0.4s linear;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		float: left;
+	}
+	.s-header .menu ul li > .sub-menu {
+		display: none;
+	}
+	.active .menu ul {
+		transform: translateX(0);
+		/* transition:  0.4s ease-in-out; */
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.s-header .active .navbar-btn .nav-icon[name="close"] {
+		display: block;
+	}
+	.s-header .active .navbar-btn .nav-icon[name="bar"] {
+		display: none;
+	}
+	.blur {
+		background-color: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		/* left: 0px; */
+		right: 0;
+		backdrop-filter: blur(3px);
+	}
+}
+
+/* message section */
+@media (max-width: 700px) {
+	.message {
+		grid-template-columns: 1fr;
+		height: 100%;
+	}
+}
+
+/* checking */
+
+@media (max-width: 768px) {
+	.hero-section .hero-text {
+		gap: 1.5rem;
+		top: 17rem;
+	}
+	.hero-section .hero-text p {
+		margin-bottom: 0;
+	}
+
+	.hero-section .img img {
+		width: 100%;
+		height: auto;
+		padding-top: 15rem;
+		border-radius: 0 0 8rem 0;
+	}
+	.hero-section .bg {
+		width: 100%;
+	}
+	.hero-section .pattern {
+		display: none;
+	}
+}
+@media (max-width: 425px) {
+	html {
+		font-size: 45%;
+	}
+}
+
+/* courses section */
+@media (max-width: 1024px) {
+	.pattern-2 {
+		display: none;
+	}
+}
+
+@media (max-width: 420px) {
+	#achievement .achievement .achievement-row {
+		max-width: 36rem;
+	}
+}
+
+@media (max-width: 767px) {
+	#contact .contact {
+		flex-direction: column;
+		gap: 3rem;
+	}
+	#contact .contact .contact-info {
+		width: 100%;
+		height: inherit;
+		padding: 0 1.8rem;
+	}
+	#contact .contact-form {
+		width: 100%;
+		height: inherit;
+		float: none;
+	}
+	#contact .contact-form .form-group {
+		width: 100%;
+		float: none;
+		margin: 1.5rem 0;
+	}
+	#contact .contact-form .form-group:last-child {
+		width: 100%;
+	}
+	#contact input[type="submit"] {
+		width: 40%;
+		float: none;
+	}
+	#contact .submit {
+		text-align: center;
+	}
+}
+
+/* Gallery */
+
+@media (max-width: 560px) {
+	.v-streched {
+		grid-row: span 1;
+	}
+	.h-streched {
+		grid-column: span 1;
+	}
+	.big-streched {
+		grid-row: span 1;
+		grid-column: span 1;
+	}
+}
+
+@media (max-width: 768px) {
+	#counter-num .counter-num {
+		justify-content: center;
+		gap: 3.5rem;
+	}
+	#counter-num .counter-num .work {
+		width: 40%;
+	}
+}
+
+/* Why -sega  */
+@media (max-width: 700px) {
+	.why__sega {
+		flex-direction: column;
+	}
+}
+
+/*Courses page  */
+@media (max-width: 1024px) {
+	#cover-heading__2 {
+		margin-top: 100px;
+	}
+}
+@media (max-width: 700px) {
+	#cover-heading__2 .cover_2heading {
+		max-width: 80%;
+	}
+}
+
+/* cover -heading */
+@media (max-width: 1024px) {
+	#cover-heading {
+		margin-top: 6.25rem;
+	}
+}

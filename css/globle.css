@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	width: 100%;
+	overflow-x: hidden;
+	background-color: white;
+}
+
+h1 {
+	font-size: 7rem;
+	font-weight: 700;
+	line-height: 4.3rem;
+}
+h2 {
+	font-size: 3rem;
+}
+h3 {
+	font-size: 2.5rem;
+	line-height: 2rem;
+}
+h4 {
+	font-size: 2rem;
+}
+h5 {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: var(--second-text-color);
+}
+li {
+	list-style: none;
+	cursor: pointer;
+}
+section {
+	margin-top: 11rem;
+}
+.container {
+	max-width: 1180px;
+	width: 100%;
+
+	margin-inline: auto;
+	padding-inline: 2rem;
+}
+
+:root {
+	--first-color: #241f77;
+	--second-color: #ff0000;
+	--first-text-color: #fff;
+	--second-text-color: #000;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+.overflow {
+	overflow: hidden;
+}
+
+.primary-btn {
+	border: none;
+	color: var(--first-text-color);
+	background-color: var(--first-color);
+	padding: 0.9rem 1.8rem;
+	font-size: 1rem;
+	border-radius: 2px 2px 10px 2px;
+	cursor: pointer;
+	transition: color 0.4s linear;
+	position: relative;
+	z-index: 1;
+}
+.primary-btn > a {
+	color: var(--first-text-color);
+	z-index: 2;
+}
+.primary-btn::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+	border-radius: 2px 2px 10px 2px;
+	transition: transform 0.5s;
+	z-index: -1;
+	transform-origin: 0 0;
+	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.btn1::before {
+	transform: scaleX(0);
+}
+.btn1:hover::before {
+	transform: scaleX(1);
+}
+
+.secondary-btn {
+	border: none;
+	color: var(--second-text-color);
+	background-color: var(--first-text-color);
+	padding: 0.9rem 1.8rem;
+	font-size: 1rem;
+	border-radius: 2px 2px 10px 2px;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+}
+
+.secondary-btn::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+	border-radius: 2px 2px 10px 2px;
+	transition: all 0.5s;
+	z-index: -1;
+	transform-origin: 0 0;
+	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+	color: var(--first-text-color);
+}
+.btn2::before {
+	transform: scaleX(0);
+}
+.btn2:hover::before {
+	transform: scaleX(1);
+}
+.secondary-btn:hover > a {
+	color: var(--first-text-color);
+	z-index: 2;
+}
+.vl {
+	border: 0.4rem solid red;
+	height: 3.5rem;
+	display: inline-block;
+	margin-inline: 1rem;
+	vertical-align: middle;
+}
+.hr-line {
+	border: 2px solid var(--first-color);
+
+	display: inline-block;
+	width: 50%;
+	margin-bottom: auto;
+	margin-top: 0.7rem;
+	margin-inline: 2rem;
+}
+
+/* courses heading */
+
+#cover-heading__2 {
+	margin-top: 6.25rem;
+	background-color: var(--first-color);
+	min-height: 12rem;
+	position: relative;
+}
+#cover-heading__2 .cover-pattern {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#cover-heading__2 .cover-pattern img {
+	height: 5rem;
+}
+#cover-heading__2 .cover_2heading {
+	max-width: 60%;
+	height: 12rem;
+	background-color: transparent;
+	position: relative;
+	border: 0.3rem solid var(--first-text-color);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+#cover-heading__2 .cover_2heading h2 {
+	color: var(--first-color);
+	font-weight: 400;
+	bottom: 1rem;
+	right: 1rem;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding: 3rem;
+	/* background-color: rgba(36, 31, 119, 0.03); */
+	background-color: var(--first-text-color);
+	animation-name: translate-coverheading;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+@keyframes translate-coverheading {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+#cover-heading__2 .cover_2heading h2::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(35, 30, 118, 0.05);
+}
+.bg-body {
+	background-color: rgba(35, 30, 118, 0.05) !important;
+}
+.bg-white {
+	background-color: var(--first-text-color);
+}
+#courses-detail {
+	padding: 4rem;
+}
+#courses-detail .courses-detail {
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: start;
+	gap: 2rem;
+}
+
+#courses-detail .container .courses-img {
+	width: 60%;
+	overflow: hidden;
+}
+#courses-detail .courses-img img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 2rem;
+}
+
+#courses-detail .courses-content ul li {
+	list-style-type: disc;
+	font-size: 2rem;
+}
+
+.sub-menu {
+	height: auto;
+	min-width: 15em;
+	display: flex;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	flex-direction: column;
+	border-top: 4px solid var(--first-color);
+	padding: 1rem 0.5rem 0 1.5rem;
+	z-index: 1;
+	top: 5rem;
+	transition: all 0.2s linear;
+	background-color: var(--first-text-color);
+	border-bottom: 1px solid #e8ebed;
+	box-shadow: 0 5px 40px rgba(179, 188, 195, 0.5);
+	visibility: hidden;
+	opacity: 0;
+}
+.sub-menu li {
+	line-height: 1rem !important;
+	height: 2.5rem !important;
+}
+.s-header .menu ul li:hover > .sub-menu {
+	visibility: visible;
+	opacity: 1;
+	top: 6.25rem;
+}
+.s-header .menu ul li > .sub-menu a {
+	line-height: 1rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
